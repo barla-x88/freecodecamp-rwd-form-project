@@ -3,7 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Car Wash Feedback Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header-img">
+        <img src="img/header-img.png" alt="car wash" />
+      </div>
+      <h1 id="title">Car Washing Station Customer Feedback Survey</h1>
+      <p id="description">
+        Your feedback is crucial in helping us understand your needs and
+        preferences, allowing us to enhance our services. By participating in
+        this survey, you are helping us improve the quality of your future
+        visits and ensuring that we continue to meet your expectations.
+      </p>
+    </header>
+    <form action="/" method="POST" id="survey-form">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name" id="name-label">
+          <span>Name:</span>
+          <input type="text" name="name" id="name" placeholder="Enter name"
+        /></label>
+        <label for="email" id="email-label">
+          <span>Email:</span>
+          <input type="email" name="email" id="email" placeholder="Enter email"
+        /></label>
+        <label for="number" class="large-label" id="number-label">
+          <span>Alloted washing bay:</span>
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder="Enter washing bay number"
+            min="1"
+            max="10"
+        /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Service Experience</legend>
+        <label for="dropdown" class="block-label">
+          <span>How often do you use our car washing services?</span>
+          <select name="service-frequency" id="dropdown">
+            <option value="first-time">First-time customer</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Daily">Daily</option>
+          </select>
+        </label>
+        <p class="block-label">
+          <span
+            >On a scale of 1 to 5, please rate the quality of the car washing
+            service: <br /><span class="grey"
+              >(1 = Very Dissatisfied, 5 = Very Satisfied)</span
+            ></span
+          >
+          <label for="one"
+            >1 <input type="radio" name="experience-rating" id="one" value="1"
+          /></label>
+          <label for="two"
+            >2 <input type="radio" name="experience-rating" id="two" value="2"
+          /></label>
+          <label for="three"
+            >3
+            <input type="radio" name="experience-rating" id="three" value="3"
+          /></label>
+          <label for="four"
+            >4 <input type="radio" name="experience-rating" id="four" value="4"
+          /></label>
+          <label for="five"
+            >5 <input type="radio" name="experience-rating" id="five" value="5"
+          /></label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Facility Cleanliness and Convenience</legend>
+        <p class="block-label">
+          <span
+            >Were the car washing bays and waiting area clean and
+            well-maintained?</span
+          >
+          <label for="yes"
+            >Yes
+            <input type="radio" name="condition" id="yes" value="yes" />
+          </label>
+          <label for="no"
+            >No
+            <input type="radio" name="condition" id="no" value="no" />
+          </label>
+        </p>
+        <p class="block-label">
+          <span>Were our facilities conveniently located?</span>
+          <label for="facility-yes"
+            >Yes
+            <input
+              type="radio"
+              name="facility-convenience"
+              id="facility-yes"
+              value="yes"
+            />
+          </label>
+          <label for="facility-no"
+            >No
+            <input
+              type="radio"
+              name="facility-convenience"
+              id="facility-no"
+              value="no"
+            />
+          </label>
+        </p>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
