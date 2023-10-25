@@ -32,6 +32,7 @@ header p {
   text-align: center;
   max-width: 774px;
   margin: 0 auto;
+  padding: 0 5px;
 }
 
 form {
@@ -40,6 +41,7 @@ form {
   min-width: 576px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 40px;
+  border-radius: 5px;
 }
 
 fieldset {
@@ -133,6 +135,35 @@ legend + p.block-label {
   margin-top: 0;
 }
 
-input[type='radio'] {
+input[type='radio'],
+input[type='checkbox'] {
   accent-color: #343434;
+}
+
+p.block-label > label.checkbox-label {
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  min-height: 3em;
+  background: #343434;
+  margin: 8px 0;
+  padding: 0.8em 1.2em;
+  color: #ffffff;
+}
+
+input[type='submit'] {
+  display: block;
+  background: #343434;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 1em 1.5em;
+}
+
+input[type='submit']:hover {
+  background: #3f3f3f;
+  cursor: pointer;
 }
