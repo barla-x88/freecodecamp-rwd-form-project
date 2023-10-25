@@ -98,7 +98,7 @@ label > * {
 
 .block-label select {
   display: block;
-  width: 50%;
+  width: 75%;
 
   border: none;
   background: #343434;
@@ -172,6 +172,10 @@ input[type='submit']:hover {
   input[type='text'],
   input[type='email'],
   input[type='number'] {
+    width: 50%;
+  }
+
+  .block-label select {
     width: 50%;
   }
 }
