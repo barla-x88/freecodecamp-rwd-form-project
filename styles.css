@@ -36,9 +36,9 @@ header p {
 }
 
 form {
-  margin: 36px auto;
+  margin: 36px 5px;
+
   max-width: 774px;
-  min-width: 576px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 40px;
   border-radius: 5px;
@@ -166,4 +166,10 @@ input[type='submit'] {
 input[type='submit']:hover {
   background: #3f3f3f;
   cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  form {
+    margin: 36px auto;
+  }
 }
