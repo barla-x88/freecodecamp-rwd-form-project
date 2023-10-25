@@ -50,7 +50,6 @@ fieldset {
 label {
   display: block;
   width: 396px;
-  margin-bottom: 8px;
 }
 
 legend {
@@ -68,15 +67,19 @@ input[type='email'],
 input[type='number'] {
   width: 307px;
   border: none;
-  border-bottom: 1px solid black;
-  padding: 5px;
-  margin-right: 0;
-  background: none;
+  padding: 0.8em 1.2em;
+  margin: 8px 0;
+  background: #343434;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #faf8ff;
 }
 
 label > * {
-  display: inline-block;
-  vertical-align: bottom;
+  display: block;
 }
 
 label span {
@@ -85,10 +88,6 @@ label span {
 
 .large-label span {
   width: auto;
-}
-
-.large-label input {
-  width: 230px;
 }
 
 .block-label {
@@ -104,12 +103,11 @@ label span {
   display: block;
   width: auto;
   border: none;
-  border-bottom: 1px solid black;
-
-  background: none;
-
+  background: #343434;
+  color: #ffffff;
+  padding: 0.8em 1.2em;
   margin: 8px 0;
-  padding: 5px;
+  border-radius: 5px;
 }
 
 p.block-label {
@@ -122,11 +120,19 @@ p.block-label > label {
   width: auto;
 }
 
-p.block-label > label > * {
-  vertical-align: middle;
+p.block-label > label > input {
+  display: inline-block;
 }
 
 .grey {
   color: #7c7a7a;
   font-size: 14px;
+}
+
+legend + p.block-label {
+  margin-top: 0;
+}
+
+input[type='radio'] {
+  accent-color: #343434;
 }
